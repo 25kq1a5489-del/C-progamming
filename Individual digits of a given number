@@ -1,0 +1,27 @@
+#include<stdio.h>
+//Function declaration 
+void print digits(int num);
+int main(){
+int number;
+printf("Enter a number:");
+scanf("%d",& number);
+printf("Individual digits are:\n");
+print digits(number);//function call
+return 0;
+}
+//Function definition 
+void print digits(int num){
+int rev=0,digit;
+//Reverse the number (to print in correct order)
+while(num>0){
+digit=num%10;
+rev=rev*10+digit;
+num/=10;
+}
+//print digits one by one
+while (rev>0){
+digit=rev%10;
+printf(:%d\n",digit);
+rev/=10;
+}
+}
